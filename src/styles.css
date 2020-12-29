@@ -1,0 +1,72 @@
+h3 {
+  font-weight: bolder;
+}
+
+form {
+  margin-bottom: 7px;
+}
+
+h6 {
+  font-weight: 600;
+}
+
+a {
+  color: #4f8a8b;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #417475;
+}
+
+button {
+  background: #ffefc3;
+  border: 1px solid #fbd46d;
+  border-radius: 4px;
+  padding: 5px 7px;
+  color: #07031a;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #fbd46d;
+  transition: all 200ms ease-in-out;
+}
+.container {
+  border: 3px solid #dbdff3;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  box-sizing: content-box;
+  margin: 50px auto;
+  padding: 30px 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: 600;
+  background-image: url("../images/background2.png");
+  background-size: 100%;
+  color: #07031a;
+  max-width: 700px;
+}
+
+.city {
+  width: 250px;
+  height: 35px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #fbd46d;
+}
+
+.other-city {
+  background: #ffefc3;
+  border: 1px solid #fbd46d;
+  border-radius: 4px;
+  padding: 5px 7px;
+  color: #07031a;
+  font-weight: 600;
+}
+
+.other-city:hover {
+  background: #fbd46d;
+  transition: all 200ms ease-in-out;
+}
