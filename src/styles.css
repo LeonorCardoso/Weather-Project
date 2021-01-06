@@ -32,7 +32,7 @@ button:hover {
   background: #fbd46d;
   transition: all 200ms ease-in-out;
 }
-.container {
+.weather-app {
   border: 3px solid #dbdff3;
   border-radius: 10px;
   display: block;
@@ -69,4 +69,19 @@ button:hover {
 .other-city:hover {
   background: #fbd46d;
   transition: all 200ms ease-in-out;
+}
+
+.style-card-group {
+  margin: 2px;
+}
+
+.style-card {
+  margin: 3px 5px;
+  background: #ffefc3;
+  border: 2px solid #fbd46d;
+  width: 25em;
+}
+.url-github {
+  font-size: 14px;
+  padding-top: 5px;
 }
