@@ -75,15 +75,12 @@ button:hover {
   transition: all 200ms ease-in-out;
 }
 
-.style-card-group {
-  margin: 3px;
-}
-
-.style-card {
-  margin: 3px 5px;
+.next-days {
+  margin: 3px 1px;
   background: #ffefc3;
   border: 2px solid #fbd46d;
   width: 25em;
+  display: inline-block;
 }
 .url-github {
   font-size: 14px;
