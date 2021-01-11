@@ -53,7 +53,7 @@ button:hover {
   color: #07031a;
 }
 
-.city {
+.enter-city {
   width: 250px;
   height: 35px;
   border: none;
@@ -78,9 +78,11 @@ button:hover {
 .next-days {
   margin: 3px 1px;
   background: #ffefc3;
-  border: 2px solid #fbd46d;
+  border: 1px solid #fbd46d;
   width: 25em;
   display: inline-block;
+  border-radius: 4px;
+  padding: none;
 }
 .url-github {
   font-size: 14px;
