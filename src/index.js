@@ -69,6 +69,10 @@ function showTemperature(response) {
   let humidity = Math.round(response.data.main.humidity);
   let currentHumidity = document.querySelector("#humidity");
   currentHumidity.innerHTML = humidity;
+  let iconElement = document.querySelector("#todays-icon");
+  iconElement.setAttribute("src" , `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt" , response.data.weather[0].description);
+  
 }
 
 let currentButton = document.querySelector("button");

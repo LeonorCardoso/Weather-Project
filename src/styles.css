@@ -1,4 +1,4 @@
-h3 {
+h4 {
   font-weight: bolder;
 }
 
@@ -75,6 +75,15 @@ button:hover {
   transition: all 200ms ease-in-out;
 }
 
+.todays-icon {
+  width: 75px;
+}
+
+.temperature-number {
+  font-size: 30px;
+  font-weight: normal;
+}
+
 .next-days {
   margin: 3px 1px;
   background: #ffefc3;
@@ -82,7 +91,7 @@ button:hover {
   width: 25em;
   display: inline-block;
   border-radius: 4px;
-  padding: none;
+  padding: 5px;
 }
 .url-github {
   font-size: 14px;
