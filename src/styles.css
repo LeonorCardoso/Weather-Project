@@ -10,15 +10,6 @@ h6 {
   font-weight: 600;
 }
 
-a {
-  color: #4f8a8b;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #417475;
-}
-
 button {
   background: #ffefc3;
   border: 1px solid #fbd46d;
@@ -82,6 +73,15 @@ button:hover {
 .temperature-number {
   font-size: 30px;
   font-weight: normal;
+}
+
+.weather-temperature .active {
+  color: #4f8a8b;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 .next-days {
