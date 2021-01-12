@@ -84,7 +84,7 @@ button:hover {
   text-decoration: none;
 }
 
-.next-days {
+.forecast-time {
   margin: 3px 1px;
   background: #ffefc3;
   border: 1px solid #fbd46d;
@@ -92,6 +92,10 @@ button:hover {
   display: inline-block;
   border-radius: 4px;
   padding: 5px;
+}
+
+.forescast-icon {
+  width: 50px;
 }
 .url-github {
   font-size: 14px;
