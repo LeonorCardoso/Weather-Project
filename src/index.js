@@ -49,6 +49,7 @@ function displayTemperature(response) {
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
   let forecast = null;
 
   for (let index = 0; index < 5 ; index++) {
@@ -64,8 +65,6 @@ function displayForecast(response) {
       </div>
     `;
   }
-
-  
 }
 
 function search(city) {
@@ -82,6 +81,17 @@ function handleSubmit (event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#new-city");
   search(cityInputElement.value);
+}
+
+function handlePosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  return `lat=${latitude}&lon=${longitude}`
+}
+
+function handleGeolocation() {
+  navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
 function displayFahrenheitTemperature(event) {
@@ -101,6 +111,9 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+let currentButton = document.querySelector("button");
+currentButton.addEventListener("click" , handleGeolocation);
+
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -111,5 +124,7 @@ fahrenheitLink.addEventListener("click" ,  displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
 
 search("Lisbon");
