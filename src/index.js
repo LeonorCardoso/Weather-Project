@@ -42,7 +42,7 @@ function displayTemperature(response) {
   currentTemp.innerHTML = Math.round(celsiusTemperature);
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   currentHumidity.innerHTML = Math.round(response.data.main.humidity);
-  iconElement.setAttribute("src" , `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("src" , `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt" , response.data.weather[0].description);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
@@ -57,7 +57,7 @@ function displayForecast(response) {
     forecastElement.innerHTML += `
       <div class="col-2 forecast-time">
           <h6>${formatHours(forecast.dt * 1000)}</h6>
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" class="forescast-icon">
+          <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" class="forescast-icon">
           <br />
           <h6 class="weather-forescast-temperature">
           ${Math.round(forecast.main.temp_max)}°/${Math.round(forecast.main.temp_min)}°
@@ -73,7 +73,7 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemperature);
 
-  apiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -90,7 +90,7 @@ function handlePosition(position) {
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemperature);
-  apiUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
